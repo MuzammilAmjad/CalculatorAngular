@@ -1,0 +1,44 @@
+<body>
+<div class="calculator">
+  <div class="lumber">
+    <span>1 2 3</span>
+  </div>
+  <div class="bar">
+    <div class="title">calc</div>
+    <div class="theme">
+      <span>THEME</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <div class="display">
+    <input [formControl]="display" [value]="currentValue | customNumber" class="display-screen" readonly>
+  </div>
+  <div class="buttons">
+    <button (click)="onNumberClick('7')">7</button>
+    <button (click)="onNumberClick('8')">8</button>
+    <button (click)="onNumberClick('9')">9</button>
+    <button class="del" (click)="onDeleteClick()">DEL</button>
+
+    <button (click)="onNumberClick('4')">4</button>
+    <button (click)="onNumberClick('5')">5</button>
+    <button (click)="onNumberClick('6')">6</button>
+    <button (click)="onOperationClick('+')">+</button>
+
+    <button (click)="onNumberClick('1')">1</button>
+    <button (click)="onNumberClick('2')">2</button>
+    <button (click)="onNumberClick('3')">3</button>
+    <button (click)="onOperationClick('-')">-</button>
+
+    <button (click)="onNumberClick('.')">.</button>
+    <button (click)="onNumberClick('0')">0</button>
+    <button (click)="onOperationClick('/')">/</button>
+    <button (click)="onOperationClick('*')">x</button>
+
+    <button class="reset-btn" (click)="onResetClick()">RESET</button>
+    <button class="equal-btn" (click)="onEqualsClick()">=</button>
+  </div>
+</div>
+</body>
